@@ -78,7 +78,7 @@ try {
   let tx = await Mina.transaction(
     { sender: feepayerAddress, fee },
     async () => {
-      await zkApp.update();
+//      await zkApp.update();
     }
   );
   await tx.prove();
