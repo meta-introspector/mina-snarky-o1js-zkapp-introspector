@@ -10,8 +10,12 @@ import { Field, SmartContract, state, State, method } from 'o1js';
  * This file is safe to delete and replace with your own contract.
  */
 export class Add extends SmartContract {
-  @state(Field) num = State<Field>();
-
+    @state(Field) num = State<Field>();
+    @state(FieldType) num = State<Field>();
+    @state(FieldEnum) num = State<Field>();
+    @state(FieldStruct) num = State<Field>();
+    @state(FieldMod) num = State<Field>();
+    
   init() {
     super.init();
     this.num.set(Field(1));
