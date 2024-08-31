@@ -25,7 +25,7 @@ npm run coverage
 
 [AGPL3](LICENSE)
 
-
+```
 NODE_V8_COVERAGE=coverage make
 
 /usr/local/bin/node --prof /usr/local/bin/npm run test
@@ -37,3 +37,15 @@ NODE_V8_COVERAGE=coverage make
  
  
  /usr/local/bin/node --trace-event-categories node,node.async_hooks,node.bootstrap,node.console,node.dns.native,node.environment,node.fs.async,node.fs.sync,node.fs_dir.async,node.fs_dir.sync,node.http,node.module_timer,node.net.native,node.perf,node.perf.timerify,node.perf.usertiming,node.promises.rejections,node.threadpoolwork.async,node.threadpoolwork.sync,node.vm.script,v8 --trace ./build/src/Add.js > add.trace2
+
+```
+
+# prepare
+
+```
+ cd build/src/
+ /usr/local/bin/node ./test_compile.js 
+ jq . report1.json > report_example.json
+```
+
+
