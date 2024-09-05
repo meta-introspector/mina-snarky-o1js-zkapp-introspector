@@ -113,7 +113,7 @@ TBD.
 TBD.
 
 **Wallet Address:**
-[MINA Wallet Address]
+B62qqFdiPRuMuQQYYo131saW1fp4f72rKXLVy2KTQEtnJzg5Hz3SqEY
 
 #### Team Info
 
