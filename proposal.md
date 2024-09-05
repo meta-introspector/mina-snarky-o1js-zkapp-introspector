@@ -13,27 +13,34 @@ This project is designed to enhance the Mina ecosystem by providing a secure and
 
 #### Proposal Overview
 
-**Problem:**
+##### Problem:
 Currently, there is no integrated solution that allows users to trigger GitLab job runners, sample their runtime performance, and verify the results using zero-knowledge proofs within the Mina ecosystem. 
 
-*** Private code ***
+###### Private code
 The problem of proving the proper execution of complex steps is currently intractible, we cannot solve this problem but start working towards developing semi verified and trusted applications.
 Users might want to provide private implementations of some job but allow the results to be executed, this could be done via this interface allowing for reproducible jobs with private implementations as well as public ones.
 The hope is that long term migration from private code to public code once it has financed itself. Private llm models might be trained and leveraged in this way as well providing unique results and value propositions. 
  
 
-**Solution:**
+##### Solution:
 The proposed solution is a zkApp that integrates with GitLab to trigger job runners, samples the runtime using `perf`, hashes the results, and verifies the execution using zero-knowledge proofs. The zkApp will deduct funds from the user's account upon successful verification, ensuring that the account is active and working.
 
-**Impact:**
+##### Impact:
 This proposal contributes to enhancing the Mina ecosystem by offering improved tools for job execution and verification, encouraging adoption, and attracting more users and developers. 
 The idea is to be able to host an ecosystem of gitlab runners each offering different services for different prices. 
 It enables novel applications by integrating GitLab job runners with zero-knowledge proofs, creating a secure and efficient ecosystem for resource sharing and selling.
 People can offer thier services to provision on other services, for example passing a smart contract that will provide the implementation driver as another zkapp
 so that this higher order function takes another function as a parameters. 
 
-**Audience:**
-The target audience of this project includes developers, users, and organizations that utilize GitLab for continuous integration and deployment. It also targets users and developers within the Mina ecosystem who are interested in leveraging zero-knowledge proofs for secure and efficient job execution.
+###### Use cases
+
+####### Bootstrap gitlab runner.
+
+We can create a smart contract that deploys a gitlab runner to an aws account with the permissions passed to the server via secure parameters. 
+
+##### Audience
+The target audience of this project includes developers, users, and organizations that utilize GitLab for continuous integration and deployment. 
+It also targets users and developers within the Mina ecosystem who are interested in leveraging zero-knowledge proofs for secure and efficient job execution.
 
 #### Architecture & Design
 
@@ -56,6 +63,12 @@ The target audience of this project includes developers, users, and organization
 
 5. **Fungible Token System:**
    - Implement a fungible token system where users pay to host the system and earn coins from other users.
+
+6. ** User interface** 
+
+It should be possible to interactivly specify the parameters to the job in html nextjs typescripton the client side and use the users wallet to execute the code.
+It should be possible to create an interactive web page that the user can chat or interact with and execute code. We can provide different functions that help the user specify the parameters. 
+we can imagine a llm interface or other ml application that is provided to help the user prepare the results. 
 
 **Vision:**
 The long-term vision for this project is to create an ecosystem of zkApps that can build and replace themselves, enabling secure and efficient resource sharing and selling within the Mina ecosystem. This will encourage adoption, attract more users and developers, and enable novel applications.
