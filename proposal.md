@@ -5,12 +5,28 @@
 We can wrap authentication to web2 apps in zkapps that offer specific services to be paid
 for in mina coin. 
 
+## Plant UML Diagrams
+
+### Sequence Diagrams
+
+#### Timeline
+
+Users purchase a mina account for 1 mina, and deposits 1 more mina to pay for fees.
+
+With account A, user registers ZK App Z1 for 0.1 mina fee.
+
+https://docs.minaprotocol.com/zkapps/writing-a-zkapp/introduction-to-zkapps/how-to-deploy-a-zkapp
+
+
 ### Create tiny web functions as zkapp that :
 
 -  allows calling of devops jobs stores a private api token of gitlab or github and uses
 web functions to trigger execution of jobs in gitlab or github via an api.
 - sample more and more of the execution of the definition of the gitlab runner to expose or prove more about it.
-this is the idea of the perf user probes to allow for sampling of any value in the system at any time.
+this is the idea of the linux root level observability system named perf that allows user probes to be setup
+to interrupt and effeciently sample any program at runtime 
+to allow for sampling of any value in the system at any time with no modification to the source code.
+
 samples can be exposed and agreed upon and proven not to reveal any senstive data via data flow analysis and other techniques. We can improve on this system incrementally. 
 - create a gui and typescript for validating the parameters of said system.
 - provision new endpoints for users on the a private mina network or test net to reduce fees. We can deploy a new contract for the user on a test net that is not so expensive to run.
@@ -31,15 +47,8 @@ etc.
 
 The current price of mina is USD $0.40 down from a high of $4.5 at the beginning. 
 The cost of creating an account is 1 mina.
+The cost of sending
 
-https://minascan.io/mainnet/tx/5JvQTouheGHgZMZzHPWS8UowkHcm6zUMV62qitynL63JuYtBnbLb/txInfo
-
-Looking at some existing contracts, the fee is defined in nanomina like this 
-`const fee = Number(config.fee) * 1e9; // in nanomina (1 billion = 1.0 mina)`
-so some have      `fee: 1e8,` for 1/10 of a mina.
-others define the fee to be 1 mina.
-
-See open questions.
 
 #### Project Background
 
@@ -270,7 +279,36 @@ B62qqFdiPRuMuQQYYo131saW1fp4f72rKXLVy2KTQEtnJzg5Hz3SqEY
 - Regular security audits and updates to the zero-knowledge proof implementation.
 - Marketing and outreach efforts to promote the project and engage users.
 
-## Open questions
+## Frequently asked questions
 
 - What is the minimum fee for calling a zkapp? What if I set my fee to just 1/billionth of a mina? 1/1e9 of a mina? What are the transaction fees for processing that fee? How can I see that?
 
+The network transaction fee is 0.1 mina, and the app can charge additional fees on top we have seen 0.1 - 2 and more.
+
+## References 
+
+### Price 
+
+#### ZKapp Fees
+
+https://minascan.io/mainnet/tx/5JvQTouheGHgZMZzHPWS8UowkHcm6zUMV62qitynL63JuYtBnbLb/txInfo
+
+Looking at some existing contracts, the fee is defined in nanomina like this 
+`const fee = Number(config.fee) * 1e9; // in nanomina (1 billion = 1.0 mina)`
+so some have      `fee: 1e8,` for 1/10 of a mina.
+others define the fee to be 1 mina.
+
+### Gpt Defintions
+
+### perf
+
+The Linux `perf` tool is designed as a root-level observability system that provides powerful and efficient sampling of any running program at runtime. It allows users to set up user probes (also known as `uprobes`) to monitor, interrupt, and sample various performance metrics without the need for modifying the source code of the program being observed.
+
+Key features include:
+- **Event-driven Sampling**: `perf` captures data based on specific performance events (e.g., CPU cycles, cache misses, page faults) and can provide insights into the behavior of programs.
+- **User Probes (Uprobes)**: This feature allows users to monitor user-space applications by dynamically inserting probes at function entry/exit points or arbitrary code locations. 
+- **Kernel Probes (Kprobes)**: Similar to uprobes, `kprobes` allow for monitoring kernel events.
+- **Low Overhead**: Designed for minimal performance impact, enabling efficient data collection and analysis even in production environments.
+- **Broad Scope**: It can monitor not only the application-level events but also system-wide events such as scheduler activities, disk I/O, network performance, and more.
+
+With `perf`, developers and administrators gain detailed visibility into how programs interact with hardware, the kernel, and the rest of the system, making it invaluable for performance tuning, debugging, and system optimization.
