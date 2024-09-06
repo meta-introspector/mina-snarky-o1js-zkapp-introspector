@@ -1,0 +1,96 @@
+#+begin_src shell
+ jq ".|keys" report_example.json  
+#+end_src
+
+#+RESULTS:
+| [                 |
+| gates             |
+| public_input_size |
+| ]                 |
+
+#+begin_src shell
+ jq ".gates|length" report_example.json  
+#+end_src
+
+#+RESULTS:
+: 323
+
+#+begin_src shell
+ jq ".gates[]|keys" report_example.json  | sort | uniq -c | sort -n | tail
+#+end_src
+
+#+RESULTS:
+| 323 | [      |
+| 323 | ]      |
+| 323 | coeffs |
+| 323 | typ    |
+| 323 | wires  |
+
+
+#+begin_src shell
+ jq ".gates[]|.wires[]|keys" report_example.json  | sort | uniq -c | sort -n | tail
+#+end_src
+
+#+RESULTS:
+| 2261 | [      |
+| 2261 | ]      |
+| 2261 | "col", |
+| 2261 | row    |
+
+#+begin_src shell
+ jq ".gates[]|.wires[]|.col" report_example.json  | sort | uniq -c | sort -n | tail
+#+end_src
+
+#+RESULTS:
+| 323 | 0 |
+| 323 | 1 |
+| 323 | 2 |
+| 323 | 3 |
+| 323 | 4 |
+| 323 | 5 |
+| 323 | 6 |
+
+
+#+begin_src shell
+ jq ".gates[]|.wires[]|.row" report_example.json  | sort | uniq -c | sort -n | tail
+#+end_src
+
+#+RESULTS:
+| 7 | 90 |
+| 7 | 91 |
+| 7 | 92 |
+| 7 | 93 |
+| 7 | 94 |
+| 7 | 95 |
+| 7 | 96 |
+| 7 | 97 |
+| 7 | 98 |
+| 7 | 99 |
+
+#+begin_src shell
+  jq -c ".gates[]|.wires[]|[.col,.row] " report_example.json  | sort | uniq -c | sort -n | tail
+#+end_src
+
+#+RESULTS:
+| 1 [6 | 90] |
+| 1 [6 | 91] |
+| 1 [6 | 92] |
+| 1 [6 | 93] |
+| 1 [6 | 94] |
+| 1 [6 | 95] |
+| 1 [6 | 96] |
+| 1 [6 | 97] |
+| 1 [6 | 98] |
+| 1 [6 | 99] |
+
+
+#+begin_src shell
+  jq  ".gates[]|.coeffs " report_example.json  | sort | uniq -c | sort -n | tail -5
+#+end_src
+
+#+RESULTS:
+|  26 | fe8516c8726665e0eee1a7f6a51ddb9461b8333c54f27e31747b0731e7122f27 |
+|  26 | ff2a7b1af512ccc0cf3db974b8329bee1947fb1b14954cc9cfd97af375eaed3f |
+|  43 | 0                                                                |
+| 297 | [                                                                |
+| 297 | ]                                                                |
