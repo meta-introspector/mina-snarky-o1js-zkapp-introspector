@@ -2,8 +2,60 @@
 
 ## Short ideas 
 
-We can wrap authentication to web2 apps in zkapps that offer specific services to be paid
-for in mina coin. 
+Imagine if you can just add a plugin to your github actions or gitlab
+and easily create and deploy mina test networks, wallets and zero
+knowledge proof apps that are defined in your existing github or
+gitlab build system, it could be used to run the jobs or deploy your
+apps or trigger some jobs or add in ai to your ticket system or resell
+any parts of those and earn tokens.
+
+Step 0.  Add MINA test net plugin to your existing github account to
+create a mina test network and token for your project itself that
+lives in your git repo and runs on commit to update it knowledge
+arguments and polynomial commitments about your commits and code.
+
+Step 1. Add Mina expose build job plugin to your existing github
+action and turn your deployment job into a zkapp that is resellable.
+
+Step 2. Add Mina expose webapp second level plugin to your existing
+github deploy action and turn your deployment resulting system into a
+zkapp that is resellable.
+
+Step 3. Use your favorite ai agent in a docker container in a github action
+to execute on comment and have it have its own wallet and use other resources and pay for them 
+in the different mina network tokens you hold.
+
+Step 4. We can search and index git repos and construct arguments of knowledge about them as owners or users
+and publish those in github and find them. We can condense existing git repos and reduce their size, removing blobs or replacing them with descriptors. This will let us search those repos for things. 
+
+Step 5. We can create a set of types and instances as prime numbers.
+We can then say there are N types in this repo. Each of the types will
+be represented as a prime number.  The type of types as a prime. So we
+can then index them, say prime number type of types is 2.  The prime
+for a type n is then is 2^n +1.  If that number is not a prime, we add
+1 until we find the next prime or use some table of primes.  This
+allows for each instance of the objects in the system to get a unique
+prime number if we want to treat it as a type. we also have our map of
+environments that contain the previous commitments so we dont double
+book a type.  This means the type numbers depend on the order they are
+constructed if there are different primes available, it could lead to
+different incompatible schemas.
+
+We can make it easy for users to add an action into github or gitlab
+that automatically creates a dev wallet, stores the secrets in a
+variable, gets money from a faucet, and uses that to deploy a smart
+contract that will allow it to be called for money or other conditions
+to create an easy way to onboard code into the zkp world.
+
+We can deploy custom private gitlab runners that execute ai agents
+talking to llms that respond to user tickets on behalf of users with
+secure parameters and delivery of results to ipfs and be paid in mina.
+
+To do this we can wrap authentication to web2 apps in zkapps that
+offer specific services to be paid for in mina coin. One web hook
+running javascript anywhere can host the zkapp that calls the gitlab
+or github cicd.  There are quite a few multi-backend systems available
+running in containers or in wasm.
 
 ## Plant UML Diagrams
 
@@ -47,7 +99,8 @@ etc.
 
 The current price of mina is USD $0.40 down from a high of $4.5 at the beginning. 
 The cost of creating an account is 1 mina.
-The cost of sending
+The transaction cost of calling a zkapp is 0.1 mina minimum.
+The fee of the zkapp function is an optional fee starting at  1/1 billionth mina.
 
 
 #### Project Background
