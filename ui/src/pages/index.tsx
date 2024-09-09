@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import GradientBG from '../components/GradientBG.js';
 import styles from '../styles/Home.module.css';
-import heroMinaLogo from '../../public/assets/hero-mina-logo.svg';
-import arrowRightSmall from '../../public/assets/arrow-right-small.svg';
 
 export default function Home() {
   useEffect(() => {
@@ -41,16 +39,7 @@ export default function Home() {
               href="https://minaprotocol.com/"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src={heroMinaLogo}
-                alt="Mina Logo"
-                width="191"
-                height="174"
-                priority
-              />
-            </a>
+            >Mina Project</a>
             <p className={styles.tagline}>
               built with
               <code className={styles.code}> o1js</code>
@@ -69,15 +58,6 @@ export default function Home() {
             >
               <h2>
                 <span>DOCS</span>
-                <div>
-                  <Image
-                    src={arrowRightSmall}
-                    alt="Mina Logo"
-                    width={16}
-                    height={16}
-                    priority
-                  />
-                </div>
               </h2>
               <p>Explore zkApps, how to build one, and in-depth references</p>
             </a>
