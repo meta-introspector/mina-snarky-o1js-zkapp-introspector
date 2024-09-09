@@ -1,0 +1,22 @@
+name: Build
+on:
+  repository_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the branch
+        uses: meta-introspector/checkout@v4
+
+      - name: Install pnpm
+        uses: meta-introspector/action-setup@v3.0.0
+        with:
+          version: latest
+      - name: Build & Deploy Worker
+        uses: meta-introspector/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
