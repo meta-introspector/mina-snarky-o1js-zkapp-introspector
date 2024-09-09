@@ -27,3 +27,20 @@ Create statements of proof.
 
 
 
+# deploy
+
+* CF_API_TOKEN 
+CLOUDFLARE_API_TOKEN
+
+* CF_ACCOUNT_ID 
+CLOUDFLARE_ACCOUNT_ID
+
+
+
+
+### Step 5. import token into gh cli
+Set
+```
+gh secret set -f .env  -R meta-introspector/mina-snarky-o1js-zkapp-introspector
+
+```
