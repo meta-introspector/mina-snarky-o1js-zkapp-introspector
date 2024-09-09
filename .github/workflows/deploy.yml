@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout the branch
         uses: meta-introspector/checkout@v4
-
       - name: Install pnpm
         uses: meta-introspector/action-setup@v3.0.0
         with:
@@ -18,5 +17,6 @@ jobs:
       - name: Build & Deploy Worker
         uses: meta-introspector/wrangler-action@v3
         with:
+          workingDirectory: "ui"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
