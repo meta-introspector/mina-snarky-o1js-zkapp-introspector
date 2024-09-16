@@ -1,0 +1,44 @@
+[package]
+name = 'zkapp-introspector'
+version = '0.1.0'
+description = 'Description for package zkapp-introspector'
+
+# See more keys and definitions at https://docs.wasmer.io/registry/manifest
+
+[[module]]
+name = 'zkapp-introspector'
+source = 'zkapp-introspector.wasm'
+abi = 'wasi'
+
+[module.interfaces]
+wasi = '0.1.0-unstable'
+
+[[command]]
+name = 'zkapp-introspector'
+module = 'zkapp-introspector'
+runner = 'wasi'
+
+[[module]]
+name = 'plonk_wasm_bg'
+source = './contracts/node_modules/o1js/dist/node/bindings/compiled/_node_bindings/plonk_wasm_bg.wasm'
+# ./ui/node_modules/o1js/dist/node/bindings/compiled/_node_bindings/plonk_wasm_bg.wasm
+# ./ui/node_modules/o1js/dist/web/web_bindings/plonk_wasm_bg.wasm
+abi = 'wasi'
+
+[[module]]
+name = 'mozjpeg_node_enc'
+source = './ui/node_modules/next/dist/server/lib/squoosh/mozjpeg/mozjpeg_node_enc.wasm'
+abi = 'wasi'
+
+# ./ui/node_modules/next/dist/server/lib/squoosh/mozjpeg/mozjpeg_node_dec.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/avif/avif_node_enc.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/avif/avif_node_dec.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/rotate/rotate.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/webp/webp_node_dec.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/webp/webp_node_enc.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/resize/squoosh_resize_bg.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/png/squoosh_oxipng_bg.wasm
+# ./ui/node_modules/next/dist/server/lib/squoosh/png/squoosh_png_bg.wasm
+# ./ui/node_modules/next/dist/compiled/source-map08/mappings.wasm
+# ./ui/node_modules/next/dist/compiled/@vercel/og/yoga.wasm
+# ./ui/node_modules/next/dist/compiled/@vercel/og/resvg.wasm

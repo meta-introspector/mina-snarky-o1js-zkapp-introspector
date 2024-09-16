@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import GradientBG from '../components/GradientBG.js';
+import GradientBG from '../components/GradientBG.jsx';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {

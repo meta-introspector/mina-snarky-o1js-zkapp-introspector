@@ -44,5 +44,5 @@ gh secret set -f .env  -R meta-introspector/mina-snarky-o1js-zkapp-introspector
 ### Test locally via act
 
 ```
-act -s GITHUB_TOKEN="$(gh auth token)" -j deploy --matrix "node:20" #"os:ubuntu-latest"
+act  --secret-file .secrets
 ```

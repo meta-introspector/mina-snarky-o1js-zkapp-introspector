@@ -1,0 +1,5 @@
+kind: wasmer.io/App.v0
+name: zkapp-introspector
+owner: jmikedupont2
+package: .
+app_id: da_KE4I8tXUMrQ2
