@@ -215,10 +215,11 @@ Users will be able to add in urls and secrets to the zkapp and validate the resu
 
 The project will be delivered in steps, each useful features on thier own.
 
+1. Step 1. One week, delivery of clinic js profiling [proposals/grant1/monitoring/clinic-js.md](proposals/grant1/monitoring/clinic-js.md) 5000 MINA
 
 **Budget Requested:**
 
-TBD.
+1. Step 1 : 5000 MINA
 
 **Wallet Address:**
 B62qqFdiPRuMuQQYYo131saW1fp4f72rKXLVy2KTQEtnJzg5Hz3SqEY
@@ -252,37 +253,3 @@ B62qqFdiPRuMuQQYYo131saW1fp4f72rKXLVy2KTQEtnJzg5Hz3SqEY
 - Regular security audits and updates to the zero-knowledge proof implementation.
 - Marketing and outreach efforts to promote the project and engage users.
 
-## Frequently asked questions
-
-- What is the minimum fee for calling a zkapp? What if I set my fee to just 1/billionth of a mina? 1/1e9 of a mina? What are the transaction fees for processing that fee? How can I see that?
-
-The network transaction fee is 0.1 mina, and the app can charge additional fees on top we have seen 0.1 - 2 and more.
-
-## References 
-
-### Price 
-
-#### ZKapp Fees
-
-https://minascan.io/mainnet/tx/5JvQTouheGHgZMZzHPWS8UowkHcm6zUMV62qitynL63JuYtBnbLb/txInfo
-
-Looking at some existing contracts, the fee is defined in nanomina like this 
-`const fee = Number(config.fee) * 1e9; // in nanomina (1 billion = 1.0 mina)`
-so some have      `fee: 1e8,` for 1/10 of a mina.
-
-others define the fee to be 1 mina or more. 
-
-### Gpt Defintions
-
-### perf
-
-The Linux `perf` tool is designed as a root-level observability system that provides powerful and efficient sampling of any running program at runtime. It allows users to set up user probes (also known as `uprobes`) to monitor, interrupt, and sample various performance metrics without the need for modifying the source code of the program being observed.
-
-Key features include:
-- **Event-driven Sampling**: `perf` captures data based on specific performance events (e.g., CPU cycles, cache misses, page faults) and can provide insights into the behavior of programs.
-- **User Probes (Uprobes)**: This feature allows users to monitor user-space applications by dynamically inserting probes at function entry/exit points or arbitrary code locations. 
-- **Kernel Probes (Kprobes)**: Similar to uprobes, `kprobes` allow for monitoring kernel events.
-- **Low Overhead**: Designed for minimal performance impact, enabling efficient data collection and analysis even in production environments.
-- **Broad Scope**: It can monitor not only the application-level events but also system-wide events such as scheduler activities, disk I/O, network performance, and more.
-
-With `perf`, developers and administrators gain detailed visibility into how programs interact with hardware, the kernel, and the rest of the system, making it invaluable for performance tuning, debugging, and system optimization.
