@@ -47,11 +47,6 @@ Production Timeline: MVP in 3 months, full production release in 6 months
 
 Budget & Milestones:
 
-Deliverables:
-- Perf recording integration in o1js
-- Function-level profiling implementation
-- IDE plugins and CI/CD integration
-- Comprehensive documentation and examples
 
 Mid-Point Milestones:
 - Perf recording mechanism implemented
