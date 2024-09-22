@@ -95,3 +95,8 @@ Coinbase Wallet B62qqFdiPRuMuQQYYo131saW1fp4f72rKXLVy2KTQEtnJzg5Hz3SqEY
 - Optimization of profiling setup to minimize performance impact.
 - Regular communication with the community for feedback and support.
 - Usage of accepted and standard tools for profiling nodejs
+
+* Related proposals *
+
+https://github.com/meta-introspector/Core-Grants/blob/main/RFCs/rfc-0010-meta-introspector.md is the larger idea.
+ 
